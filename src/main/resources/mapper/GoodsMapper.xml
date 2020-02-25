@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bw.mapper.GoodsMapper">
+	<select id="selectGoods" resultType="com.bw.bean.Goods">
+		select * from tb_goods g, tb_brand b,tb_kind k where g.kid=k.kid and g.bid=b.bid
+	</select>
+</mapper>
